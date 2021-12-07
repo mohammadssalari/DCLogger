@@ -1,0 +1,19 @@
+﻿Es eistiert in DataCube Lib eine Methode LOG mit 2 Überladungen
+
+        public bool Log(int eventId, int appId, int beatId, LanguageEnum languageEnum,object AdditionalInfo ,out string errorMessage);
+        public bool Log(System.Runtime.Serialization.ISerializable exception, int appId, int beatId);
+		
+		diese Methoden benutzen die REst Punkte eines Api diesntes um die Events und Fehler loggen.
+		
+		Ausser der Log Methode stellt dieser Dienst noch folgende Methoden zur Verfügung:
+		
+        public bool CreateEvent(Dictionary<LanguageEnum, string> languageEventMessageDictionary, int applicationId, out int eventId);
+        public bool CreateApp(string appName, string description, out int appId);
+
+        public string GetSpecificEventMessage(int eventId, LanguageEnum languageEnum);
+        public string[] GetEventMessagesForAnApp(int appId, LanguageEnum languageEnum);
+        
+
+        public Events[] GetProtocollForAHearthbeat(int hearthBeat);
+        public Events[] GetProtocollForaTimeSpan(DateTime start, DateTime end);
+        

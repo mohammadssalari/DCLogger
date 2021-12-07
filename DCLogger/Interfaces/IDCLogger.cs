@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using DCLogger.Models;
 
 namespace DCLogger.Interfaces
@@ -52,6 +53,14 @@ namespace DCLogger.Interfaces
         /// <param name="hearthBeat"></param>
         /// <returns></returns>
         public Events[] GetProtocollForAHearthbeat(int hearthBeat);
+
+        /// <summary>
+        /// returns all Events and Events for the given Timespan
+        /// </summary>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
+        /// <returns></returns>
+        public Events[] GetProtocollForaTimeSpan(DateTime start, DateTime end);
 
         #endregion
 
