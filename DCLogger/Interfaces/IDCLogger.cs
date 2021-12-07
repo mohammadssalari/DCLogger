@@ -41,7 +41,7 @@ namespace DCLogger.Interfaces
         /// <param name="appId"></param>
         /// <param name="languageEnum"></param>
         /// <returns></returns>
-        public string[] GetErrorMessagesForAnApp(int appId, LanguageEnum languageEnum);
+        public string[] GetEventMessagesForAnApp(int appId, LanguageEnum languageEnum);
         #endregion
 
         #region Debugging
