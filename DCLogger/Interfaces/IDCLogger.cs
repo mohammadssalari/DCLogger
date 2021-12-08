@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using DCLogger.Models;
 
 namespace DCLogger.Interfaces
@@ -9,6 +10,7 @@ namespace DCLogger.Interfaces
     /// </summary>
     public interface IDcLogger
     {
+        #region Api
         #region Managment
         /// <summary>
         /// Creates an Error if The Creation was successfull the function will return true
@@ -64,7 +66,11 @@ namespace DCLogger.Interfaces
 
         #endregion
 
-        #region Logging
+
+        #endregion
+
+
+        #region Nuget
 
         /// <summary>
         /// Logs an Error
@@ -73,10 +79,11 @@ namespace DCLogger.Interfaces
         /// <param name="appId">The Application Id</param>
         /// <param name="beatId">Hearthbeat id</param>
         /// <param name="languageEnum">The Language you want the errorMessage be in </param>
-        /// <param name="AdditionalInfo">an Object with can contain any additionalinfo you might log with</param>
+        /// <param name="additionalInfo">an Object with can contain any additionalinfo you might log with</param>
+        /// <param name="eventLevel">The Level of event</param>
         /// <param name="errorMessage">The errorMessage in the Given languageEnum</param>
         /// <returns>if Error could be created it will be true</returns>
-        public bool Log(int eventId, int appId, int beatId, LanguageEnum languageEnum,object AdditionalInfo ,out string errorMessage);
+        public bool Log(int eventId, int appId, int beatId, LanguageEnum languageEnum, object additionalInfo, EventLevel eventLevel,out string errorMessage);
 
 
         /// <summary>
