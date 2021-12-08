@@ -16,7 +16,8 @@ namespace DCLogger.Interfaces
         /// <param name="eventId"></param>
         /// <returns></returns>
         public bool CreateEvent(Dictionary<LanguageEnum, string> languageEventMessageDictionary, int applicationId, out int eventId);
-
+         
+        
         /// <summary>
         /// 
         /// </summary>
